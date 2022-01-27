@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker by Miechenne</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- hamburger icon -->
+</head>
+<body>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <a href="#home" class="active">Miechenne's color picker</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#red" onclick="body.style.backgroundColor = 'red'; this.style.color = '#FFF'; myFunction()">Red</a>
+        <!-- function is being triggered on click -->
+        <a href="#green" onclick="body.style.backgroundColor = 'green'; this.style.color = '#FFF'; myFunction()">Green</a>
+        <a href="#blue" onclick="body.style.backgroundColor = 'blue'; this.style.color = '#FFF'; myFunction()">Blue</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <!-- call function in js -->
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+</body>
+<script>
+    function myFunction() {
+        // function
+        let x = document.getElementById("myLinks");
+        // select element in html
+        if (x.style.display === "block") {
+            // check to see which style is applied
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+</html>
